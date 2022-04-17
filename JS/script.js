@@ -12,22 +12,22 @@
  * синтаксис литерала обьекта 
 */ 
 
-let firstPart = "likes";
-let userInfo = {  
-    name: "Вася",
-    age: 30,
-    "58": `qweqwe`,
-    [firstPart + " javascript"]: true,
-    [firstPart]: false,
-    adress: {
-        city: "Kyiv",
-        street: "Bandera"
-    }
-}; 
+// let firstPart = "likes";
+// let userInfo = {  
+//     name: "Вася",
+//     age: 30,
+//     "58": `qweqwe`,
+//     [firstPart + " javascript"]: true,
+//     [firstPart]: false,
+//     adress: {
+//         city: "Kyiv",
+//         street: "Bandera"
+//     }
+// }; 
 
-for (const key in userInfo.adress) {
-    console.log(userInfo.adress[key])
-}
+// for (const key in userInfo.adress) {
+//     console.log(userInfo.adress[key])
+// }
 
 // console.log(userInfo);
 // console.log(userInfo["name"]); // "Вася"
@@ -151,3 +151,48 @@ for (const key in userInfo.adress) {
 
 // console.log(new UserInfo('Vasya'))
 // console.log(new UserInfo('Lena'))
+
+
+
+
+// let userInfo1 = {  
+//     name1: "Вася",
+//     age1: 30,
+   
+// }; 
+
+// let userInfo2 = {  
+//     name2: "asd",
+//     age2: 30,
+   
+// }; 
+
+// let userInfo3 = {  
+//     name3: "qwe",
+//     age3: 30,
+   
+// }; 
+
+// console.log({...userInfo1})
+
+
+// const numbers = [1,23,4,5,6]
+
+// console.log(Math.max(...numbers))
+
+// const divs = document.querySelectorAll('div');
+// const nodes = [...divs];
+// // console.log(nodes)
+
+// // console.log(divs, Array.isArray(divs))
+// console.log(nodes, Array.isArray(nodes))
+
+
+function sum(a,b,...rest) {
+    console.log(rest)
+    return a + b + rest.reduce((a, i) => a + i, 0)
+}
+
+const numbers = [10, 2, 3, 4, 5, 6]
+
+console.log(sum(...numbers))
